@@ -4101,8 +4101,8 @@
 
                         <div class="danger-note">
                             <p style="font-weight: 600; color: #dc3545; margin-bottom: 8px;">🔥 再次警告：此操作不可撤销！</p>
-                            <p>请在下方输入 <strong style="color: #dc3545;">DELETE ${repositoryData.full_name}</strong> 以确认删除：</p>
-                            <input type="text" id="confirm-repo-fullname" class="swal2-input" placeholder="DELETE ${repositoryData.full_name}" autocomplete="off" style="font-size: 13px; font-weight: 600;">
+                            <p>请在下方输入 <strong style="color: #dc3545;">DELETE</strong> 以确认删除：</p>
+                            <input type="text" id="confirm-repo-fullname" class="swal2-input" placeholder="DELETE" autocomplete="off" style="font-size: 13px; font-weight: 600;">
                         </div>
                     </div>
                 `;
@@ -4119,7 +4119,7 @@
                     focusCancel: true,
                     preConfirm: () => {
                         const input = document.getElementById('confirm-repo-fullname');
-                        const expectedText = `DELETE ${repositoryData.full_name}`;
+                        const expectedText = `DELETE`;
                         if (!input || input.value.trim() !== expectedText) {
                             Swal.showValidationMessage(`请输入 "${expectedText}" 以确认`);
                             return false;
