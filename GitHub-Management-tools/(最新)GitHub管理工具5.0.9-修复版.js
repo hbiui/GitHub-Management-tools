@@ -1445,7 +1445,7 @@
             }
         }
 
-       // 修复:获取当前所在目录路径 - v5.0.8 彻底修复版本
+       // 修复:获取当前所在目录路径 - v5.0.9 彻底修复版本
         static getCurrentDirectoryPath() {
             try {
                 const pathname = window.location.pathname;
@@ -1547,7 +1547,7 @@
                         'Authorization': `token ${token}`,
                         'Accept': 'application/vnd.github.v3+json',
                         'Content-Type': 'application/json',
-                        'User-Agent': 'GitHub-Batch-Tools/5.0.6'
+                        'User-Agent': 'GitHub-Batch-Tools/5.0.9'
                     },
                     timeout: 30000,
                     onload: (response) => {
@@ -2386,7 +2386,7 @@
             return stats;
         }
 
-        // 修复：获取完整的仓库路径 - v5.0.8 彻底修复版本
+        // 修复：获取完整的仓库路径 - v5.0.9 彻底修复版本
         getRepositoryPath(relativePath) {
             // 获取当前目录路径
             const currentDirectoryPath = RepoInfo.getCurrentDirectoryPath();
@@ -3443,7 +3443,7 @@
                         </ul>
                         <hr style="margin: 12px 0; border: none; border-top: 1px solid #e9ecef;">
                         <p><strong>⌨️ 快捷键:</strong> <kbd style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; padding: 2px 6px; font-family: monospace; font-size: 11px;">Ctrl+Shift+G</kbd> 显示/隐藏面板</p>
-                        <p><strong>📌 版本:</strong> 5.0.6 (修复上传到子目录失败和API响应处理问题)</p>
+                        <p><strong>📌 版本:</strong> 5.0.9 (修复上传到子目录失败和API响应处理问题)</p>
                         <p><strong>🆕 更新说明:</strong></p>
                         <ul style="margin-left: 18px; line-height: 1.6;">
                             <li>✅ 修复GitHub API响应中content字段可能为null的问题</li>
@@ -4924,7 +4924,7 @@
     // ==================== 主初始化函数 ====================
     function main() {
         if (StateManager.isGitHubPage() && StateManager.getScriptEnabled()) {
-            console.log('[GitHub Batch Tools] v5.0.6 - 开始初始化');
+            console.log('[GitHub Batch Tools] v5.0.9 - 开始初始化');
             Utils.debugLog('[GitHub Batch Tools] 调试模式:', CONFIG.DEBUG_MODE);
             initializeGitHubPage();
         }
@@ -5001,7 +5001,7 @@
                             try {
                                 if (!document.getElementById('github-tools-floating')) {
                                     new GitHubUIManager();
-                                    console.log('[GitHub Batch Tools] v5.0.6 初始化成功（通过DOM监听）');
+                                    console.log('[GitHub Batch Tools] v5.0.9 初始化成功（通过DOM监听）');
                                 }
                             } catch (error) {
                                 console.error('[GitHub Batch Tools] 脚本初始化失败:', error);
@@ -5019,7 +5019,7 @@
                     try {
                         if (!document.getElementById('github-tools-floating')) {
                             new GitHubUIManager();
-                            console.log('[GitHub Batch Tools] v5.0.6 初始化成功');
+                            console.log('[GitHub Batch Tools] v5.0.9 初始化成功');
                         }
                         observer.disconnect();
                     } catch (error) {
